@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Vodio.AI",
+  "version": "1.0.0",
+  "action": { "default_popup": "index.html" },
+  "permissions": ["storage", "tabs", "identity","activeTab","cookies"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["src/pages/content-script/index.tsx"]
+    }
+  ],
+  "externally_connectable": {
+    "matches": ["http://localhost:5173/*","http://localhost:3000/*"]
+  },
+  "background": {
+    "service_worker": "src/pages/background/background.ts",
+    "type": "module"
+  },
+  "content_security_policy": {
+    "script-src": "self",
+    "object-src": "self"
+  }
+}

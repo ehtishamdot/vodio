@@ -1,0 +1,5 @@
+
+export enum SIGNALS{
+    LOGIN="LOGIN_SIGNAL",
+    CONTENT="CONTENT_SIGNAL"
+}
