@@ -1,7 +1,7 @@
 import * as sgMail from "@sendgrid/mail";
 import { prisma } from "@/db/config";
 import ServerError, { JWTPayload } from "@/lib/types";
-import { decryptToken, errorHandler, getOpenAIApiInstance } from "@/lib/utils";
+import { decryptToken, errorHandler } from "@/lib/utils";
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
 
